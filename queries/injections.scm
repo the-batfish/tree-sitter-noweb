@@ -333,5 +333,3 @@
 ((documentation) @injection.content
  (#set-from-buffer-var! injection.language "noweb_doc_language"))
 
-((documentation) @injection.content
- (#set! injection.language "latex"))
