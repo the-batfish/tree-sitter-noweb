@@ -1,0 +1,148 @@
+[
+  {
+    "type": "chunk_content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "chunk_reference",
+          "named": true
+        },
+        {
+          "type": "content_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "chunk_header",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "chunk_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "chunk_reference",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "chunk_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "chunk_terminator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "code_chunk",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "chunk_content",
+          "named": true
+        },
+        {
+          "type": "chunk_header",
+          "named": true
+        },
+        {
+          "type": "chunk_terminator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "doc_marker",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "documentation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "doc_marker",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "code_chunk",
+          "named": true
+        },
+        {
+          "type": "documentation",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
+    "type": ">>",
+    "named": false
+  },
+  {
+    "type": ">>=",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "chunk_name",
+    "named": true
+  },
+  {
+    "type": "content_line",
+    "named": true
+  }
+]

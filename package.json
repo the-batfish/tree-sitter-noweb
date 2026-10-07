@@ -1,0 +1,61 @@
+{
+  "name": "tree-sitter-noweb",
+  "version": "1.0.0",
+  "description": "Noweb grammar for tree-sitter",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-batfish/tree-sitter-noweb.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "noweb",
+    "literate-programming"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "author": "the-batfish",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/the-batfish/tree-sitter-noweb/issues"
+  },
+  "homepage": "https://github.com/the-batfish/tree-sitter-noweb#readme",
+  "tree-sitter": [
+    {
+      "scope": "source.noweb",
+      "file-types": [
+        "nw",
+        "noweb"
+      ]
+    }
+  ],
+  "devDependencies": {
+    "tree-sitter-cli": "^0.22.0",
+    "prebuildify": "^6.0.0"
+  },
+  "dependencies": {
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  }
+}
