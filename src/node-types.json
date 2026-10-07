@@ -5,14 +5,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "chunk_reference",
-          "named": true
-        },
-        {
-          "type": "content_line",
           "named": true
         }
       ]
@@ -139,10 +135,6 @@
   },
   {
     "type": "chunk_name",
-    "named": true
-  },
-  {
-    "type": "content_line",
     "named": true
   }
 ]

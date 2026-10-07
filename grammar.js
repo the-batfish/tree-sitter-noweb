@@ -33,7 +33,7 @@ module.exports = grammar({
       repeat1(
         choice(
           $.chunk_reference,
-          $.content_line
+          $._content_line
         )
       ),
 
@@ -44,13 +44,17 @@ module.exports = grammar({
         ">>"
       )),
 
-    content_line: ($) => /[^\n<@]+/,
+    _content_line: ($) =>
+      choice(
+        /[^\n<@]+/,
+        "<",
+      ),
 
     chunk_terminator: ($) =>
-      seq(
+      prec(1, seq(
         "@",
         optional(/[^\n]*/)
-      ),
+      )),
 
     documentation: ($) =>
       prec.right(repeat1(
