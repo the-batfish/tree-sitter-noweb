@@ -325,6 +325,17 @@
  (#set! injection.language "latex"))
 
 ;; ============================================================================
+;; Dynamic Chunk Injections
+;; Injected dynamically via #set-chunk-lang! directive based on chunk dependency
+;; graph (propagating from file chunk extensions down to referenced named chunks).
+;; ============================================================================
+
+((code_chunk
+  (chunk_header (chunk_name) @_name)
+  (chunk_content) @injection.content)
+ (#set-chunk-lang! injection.language @_name))
+
+;; ============================================================================
 ;; Documentation Injections
 ;; Injected from buffer variable read from nolsp.toml (project-level > user-level)
 ;; Falls back to LaTeX if unconfigured.
@@ -332,4 +343,5 @@
 
 ((documentation) @injection.content
  (#set-from-buffer-var! injection.language "noweb_doc_language"))
+
 

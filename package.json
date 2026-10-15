@@ -25,6 +25,9 @@
     "prebuilds/**",
     "bindings/node/*",
     "queries/*",
+    "plugin/**",
+    "ftplugin/**",
+    "ftdetect/**",
     "src/**"
   ],
   "author": "the-batfish",
