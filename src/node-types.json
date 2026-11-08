@@ -1,5 +1,10 @@
 [
   {
+    "type": "chunk_annotation",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "chunk_content",
     "named": true,
     "fields": {},
@@ -49,7 +54,17 @@
   {
     "type": "chunk_terminator",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "chunk_annotation",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "code_chunk",
@@ -97,6 +112,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,

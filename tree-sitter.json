@@ -1,0 +1,30 @@
+{
+  "grammars": [
+    {
+      "name": "noweb",
+      "camelcase": "Noweb",
+      "scope": "source.noweb",
+      "path": ".",
+      "file-types": [
+        "nw",
+        "noweb"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
+      "injection-regex": "^noweb$"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "ISC",
+    "description": "Noweb grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "the-batfish"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/the-batfish/tree-sitter-noweb"
+    }
+  }
+}

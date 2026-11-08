@@ -53,8 +53,10 @@ module.exports = grammar({
     chunk_terminator: ($) =>
       prec(1, seq(
         "@",
-        optional(/[^\n]*/)
+        optional($.chunk_annotation)
       )),
+
+    chunk_annotation: ($) => /[^\n]*/,
 
     documentation: ($) =>
       prec.right(repeat1(

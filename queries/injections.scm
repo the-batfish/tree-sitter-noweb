@@ -325,6 +325,230 @@
  (#set! injection.language "latex"))
 
 ;; ============================================================================
+;; Static Terminator-Tag Injections
+;; Named chunks (no file extension) are assigned a language via an explicit tag
+;; written on the `@` terminator line using the documentation language's comment
+;; syntax, e.g. `@ % (python)`, `@ <!-- (python) -->`, or `@ // (python)`.
+;; These rules are fully static so they work in any tree-sitter editor.
+;; ============================================================================
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(c\\)")
+ (#set! injection.language "c"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(cpp\\)")
+ (#set! injection.language "cpp"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(rust\\)")
+ (#set! injection.language "rust"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(python\\)")
+ (#set! injection.language "python"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(go\\)")
+ (#set! injection.language "go"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(typescript\\)")
+ (#set! injection.language "typescript"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(tsx\\)")
+ (#set! injection.language "tsx"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(javascript\\)")
+ (#set! injection.language "javascript"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(bash\\)")
+ (#set! injection.language "bash"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(html\\)")
+ (#set! injection.language "html"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(css\\)")
+ (#set! injection.language "css"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(scss\\)")
+ (#set! injection.language "scss"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(json\\)")
+ (#set! injection.language "json"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(toml\\)")
+ (#set! injection.language "toml"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(yaml\\)")
+ (#set! injection.language "yaml"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(xml\\)")
+ (#set! injection.language "xml"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(sql\\)")
+ (#set! injection.language "sql"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(r\\)")
+ (#set! injection.language "r"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(java\\)")
+ (#set! injection.language "java"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(kotlin\\)")
+ (#set! injection.language "kotlin"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(c_sharp\\)")
+ (#set! injection.language "c_sharp"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(lua\\)")
+ (#set! injection.language "lua"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(zig\\)")
+ (#set! injection.language "zig"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(fortran\\)")
+ (#set! injection.language "fortran"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(julia\\)")
+ (#set! injection.language "julia"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(haskell\\)")
+ (#set! injection.language "haskell"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(ocaml\\)")
+ (#set! injection.language "ocaml"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(elixir\\)")
+ (#set! injection.language "elixir"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(erlang\\)")
+ (#set! injection.language "erlang"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(clojure\\)")
+ (#set! injection.language "clojure"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(nix\\)")
+ (#set! injection.language "nix"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(cmake\\)")
+ (#set! injection.language "cmake"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(make\\)")
+ (#set! injection.language "make"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(typst\\)")
+ (#set! injection.language "typst"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(markdown\\)")
+ (#set! injection.language "markdown"))
+
+((code_chunk
+  (chunk_content) @injection.content
+  (chunk_terminator (chunk_annotation) @_tag))
+ (#match? @_tag "\\(latex\\)")
+ (#set! injection.language "latex"))
+
+;; ============================================================================
 ;; Dynamic Chunk Injections
 ;; Injected dynamically via #set-chunk-lang! directive based on chunk dependency
 ;; graph (propagating from file chunk extensions down to referenced named chunks).
