@@ -54,3 +54,5 @@ Thumbs.db
 # Example dirs / scratch
 /examples/*/
 scratch/
+
+AGENTS.md
